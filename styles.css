@@ -1,0 +1,317 @@
+/* Estilo para centrar la tarjeta y configurar el fondo */
+body {
+    font-family: 'Itim';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('and1.jpg');
+    
+}
+
+.card {
+    text-align: center;
+    background: #d99dd28f;
+    padding: 35px;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 60%;
+    opacity: 0;
+    animation: fadeInCard 1.5s ease forwards;
+}
+
+/* Animación de aparición para la tarjeta */
+@keyframes fadeInCard {
+    from { opacity: 0; transform: scale(0.8); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    font-size: 25px;
+    color: #fff;
+    background-color: #d861efd6;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Estilos para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Grid de fotos */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+.message-text {
+    margin-top: 5px;
+    font-size: 13px; /* Ajustado si es necesario */
+    color: #a99c36; /* Color del texto */
+    text-align: center;
+    font-family: 'Itim';
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+/* Imágenes dentro del carrusel */
+.carousel-slide {
+    display: flex;
+    transition: transform 1s ease;
+}
+
+.carousel img {
+    width: 100%; /* Mantiene el ancho del carrusel */
+    height: 260px; /* Ajusta la altura de las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 20px;
+}
+
+
+.photo:hover {
+    transform: scale(1.1);
+}
+/* Galería de fotos en columna vertical */
+.photo-gallery {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.photo-column-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px; /* Espacio entre cada foto en la columna */
+}
+
+.photo {
+    width: 111px; /* Ajusta el ancho de las fotos */
+    height: auto;
+    border: 3px solid #e100ff52;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.1);
+}
+
+/* Estilos para el mensaje en el centro */
+.message-center {
+    text-align: justify;
+    max-width: 250px; /* Ajustado */
+    padding: 10px; /* Añadido */
+    background-color: #ffffff; /* Añadido para contraste */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Añadido */
+}
+
+
+button#nextMessageButton {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#nextMessageButton:hover {
+    background-color: #0056b3;
+}
+
+.help-icon {
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-size: 24px; /* Tamaño del icono */
+    margin-left: 10px; /* Espacio entre el input y el icono */
+    vertical-align: middle; /* Alinea verticalmente el icono */
+    color: gray; /* Color por defecto (apagado) */
+    transition: color 0.3s ease; /* Suaviza el cambio de color */
+}
+
+.help-icon.active {
+    color: gold; /* Color del bombillo cuando está "encendido" */
+}
+
+/* Contenedor principal de los carruseles y el mensaje */
+.carousel-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Ajustes de tamaño para los carruseles */
+.carousel {
+    width: 116px; /* Ajusta el ancho del carrusel */
+    overflow: hidden;
+    border-radius: 54px;
+    box-shadow: 6px 5px 8px rgba(0, 0, 0, 0.2);
+}
+
+.message-center {
+    text-align: center;
+    max-width: 295px;
+}
+
+#keywordCard {
+    background-image: url('3.jpg'); /* Cambia 'ruta-de-tu-imagen.jpg' a la ruta real de tu imagen */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: white; /* Cambia el color del texto para que contraste si es necesario */
+    padding: 20px; /* Ajusta el relleno según lo necesites */
+    border-radius: 10px; /* Agrega un borde redondeado si lo deseas */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Añade un efecto de sombra */
+}
+
+#keywordCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 5%);
+    z-index: -1; /* Asegura que la capa esté detrás del contenido */
+}
+
+#keywordInput {
+    width: 100%; /* Para que el input ocupe todo el ancho del contenedor */
+    max-width: 170px; /* Ancho máximo para un tamaño óptimo */
+    padding: 2px 10px; /* Espaciado interno */
+    margin-top: 70px; /* Separación respecto a otros elementos */
+    font-size: 1.1em; /* Tamaño de la fuente */
+    border: 2px solid #48abd7a3; /* Borde inicial */
+    border-radius: 15px; /* Bordes redondeados */
+    outline: none; /* Remueve el contorno por defecto */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Transición suave para el hover */
+    box-shadow: 0px 4px 6px rgba(192, 61, 142, 0.1); /* Sombra sutil */
+}
+
+#keywordInput:focus {
+    border-color: #d366c1; /* Color del borde en foco */
+    box-shadow: 0px 4px 10px rgba(106, 27, 154, 0.3); /* Sombra más fuerte en foco */
+}
+
+#keywordInput::placeholder {
+    color: #999; /* Color del texto del placeholder */
+    font-style: italic; /* Texto del placeholder en cursiva */
+    opacity: 0.8;
+}
+
+/* Contenedor para centrar el botón en la pantalla */
+.center-button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh; /* Ocupa toda la pantalla */
+}
+/* Botón estilizado */
+#revealButton {
+    font-size: 2em;
+    padding: 2px;
+    background-color: #ff6f91;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 8px 9px 7px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    animation: subtlePulse 1.5s ease infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Animación de pulso sutil */
+@keyframes subtlePulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+#revealButton:hover {
+    transform: scale(1.15);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#photoContainer {
+    background-image: url('anhb1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+#photoContainer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.6); /* Ajusta el color y la opacidad */
+    border-radius: inherit; /* Mantiene las esquinas redondeadas */
+    z-index: 1; /* Coloca esta capa debajo del contenido */
+}
+
+/* Para asegurar que el contenido esté encima de la capa */
+#photoContainer > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.birthday-title {
+    text-align: center;
+    font-family: 'Itim', cursive; /* Usa la misma fuente que el resto */
+    font-size: 2.5rem; /* Tamaño del texto */
+    color: #ff69b4; /* Un color rosado o elige otro tono festivo */
+    margin: 20px 0; /* Espaciado para separar del contenido */
+    animation: bounce 2s infinite; /* Animación para darle un efecto de rebote */
+}
+
+/* Animación de rebote */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}

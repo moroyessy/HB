@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarjeta Interactiva de Cumpleaños</title>
+    <!-- Enlace a Google Fonts para la fuente "Dancing Script" -->
+    <link href="https://fonts.googleapis.com/css2?family=Itim&display=swap" rel="stylesheet">
+    <!-- Enlace a tu archivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+    <!-- Tarjeta inicial -->
+    <div class="card fade-in" id="initialCard">
+        <h1>🎉 ¡HOY ES UN GRAN DÍA! <br>PARA CELEBRAR QUE UN DÍA COMO HOY NACIO MI TULITA! 🎉</h1>
+        <p>Estando lejos, la mejor manera que se me ocurrió para hacerte un detalle fue este!</p>
+        <div class="center-button-container">
+            <button id="revealButton"><i class="fa-solid fa-gifts"></i></button>
+        </div>
+    </div>
+
+    <!-- Card de entrada de palabra clave (inicialmente oculto) -->
+    <div class="card hidden" id="keywordCard">
+        <p><br>Una de las cosas lindas que tiene esta amistad, considero que es la comunicación</p>
+        <p>Así que... Ingresa nuestra frase código!</p>
+        <input type="text" id="keywordInput" placeholder="Escribe aquí..." />
+        
+        <!-- Icono de bombillo para ayuda -->
+        <span id="helpButton" class="help-icon" title="Ayuda">💡</span>
+        <div id="helpHint" class="hidden">Pista: Es un animal grande y de color inusual jaja.</div>
+    </div>
+
+    <!-- Card para la galería de fotos y el mensaje (inicialmente oculto) -->
+    <div class="card hidden" id="photoContainer">
+
+        <!-- Galería de fotos (ahora en la parte superior) -->
+        <div class="photo-gallery">
+            <div class="photo-column">
+                <img src="23.jpg" alt="Foto 1" class="photo">
+                <img src="nw1.jpg" alt="Foto 2" class="photo">
+                <img src="13.jpg" alt="Foto 3" class="photo">
+            </div>
+
+            <div class="photo-column">
+                <img src="22.jpg" alt="Foto 4" class="photo">
+                <img src="4.jpg" alt="Foto 5" class="photo">
+                <img src="16.jpg" alt="Foto 6" class="photo">
+            </div>
+        </div>
+
+        <h2 class="birthday-title">🎉¡FELIZ CUMPLEAÑOS<br>  TULITA DE MI CORA!🎉</h2>
+        <!-- Carruseles con el mensaje centrado -->
+        <div class="carousel-container">
+            
+            <!-- Carrusel de fotos del lado izquierdo -->
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="an4.jpg" alt="Foto 1">
+                    <img src="an1.jpg" alt="Foto 2">
+                    <img src="an11.jpg" alt="Foto 3">
+                    <img src="an12.jpg" alt="Foto 4">
+                    <img src="an9.jpg" alt="Foto 5">
+                    <img src="an7.jpg" alt="Foto 6">
+                    <img src="an2.jpg" alt="Foto 7">
+                    <img src="an14.jpg" alt="Foto 8">
+                    <img src="an15.jpg" alt="Foto 9">
+                    <img src="an22.jpg" alt="Foto 10">
+                </div>
+            </div>
+
+            <!-- Mensaje en el centro -->
+            <div class="message-center">
+                <p class="message-text">En este día tan especial solo puedo agradecer y recordar lo privilegiada que me hace el ser tu amiga. <br>
+                    Gracias por la amistad tan bonita que me has brindado, estando en todo momento y con los valores más bonitos.<br>
+                    Que la vida sea tan bonita contigo, como lo eres tú con cada persona que te rodea.<br>
+                    Que en este día seas la cumpleañera más consentida y la pases muy lindo junto a los seres que te quieren.<br>
+                    Deseo que este nuevo año te traiga más amor y sigas cumpliendo cada una de las cosas que te propones.<br>
+                    Que sigas creciendo en conocimiento y corazón (aunque creo que de este último ya es imposible).<br>
+                    AHHHH!! y si trae un sobrinito también!! jiji. <br>
+                    Te mando un MEGA ABRAZOOOTE!!, TE EXTRAÑO Y TE QUIERO INMENSO TULITA DEL MAR! 
+                </p>
+            </div>
+
+            <!-- Carrusel de fotos del lado derecho -->
+            <div class="carousel">
+                <div class="carousel-slide">
+                    <img src="an5.jpg" alt="Foto 1">
+                    <img src="an6.jpg" alt="Foto 2">
+                    <img src="an3.jpg" alt="Foto 3">
+                    <img src="an13.jpg" alt="Foto 4">
+                    <img src="an17.jpg" alt="Foto 5">
+                    <img src="an18.jpg" alt="Foto 6">
+                    <img src="an19.jpg" alt="Foto 7">
+                    <img src="an20.jpg" alt="Foto 8">
+                    <img src="an8.jpg" alt="Foto 9">
+                    <img src="an21.jpg" alt="Foto 10">
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Segundo mensaje (inicialmente oculto) -->
+    <div id="secondMessage" class="hidden">
+        <p>Este es un nuevo comienzo, lleno de buenos deseos para ti. ¡Que todos tus sueños se hagan realidad!</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
